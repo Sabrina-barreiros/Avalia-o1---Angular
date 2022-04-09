@@ -1,5 +1,5 @@
 <h3>Código</h3>
-<input type="text" [(ngModel)]="codigo"/>
+<input type="number" [(ngModel)]="codigo"/>
 
 <h3>Disciplina</h3>
 <input type="text" [(ngModel)]="nome"/>
@@ -8,12 +8,10 @@
 <input type="text" [(ngModel)]="semana"/>
 
 <h3>Horário</h3>
-<input type="number" [(ngModel)]="horario"/>
+<input type="time" [(ngModel)]="horario"/>
 <br><br>
-<button>Adicionar</button>
+<button (click)=sabrinaDisciplinas.add(codigo,nome,semana,horario)>Adicionar</button>
 <button>Remover</button>
-
-
 
 
 <h2>Lista de Disciplinas</h2>
