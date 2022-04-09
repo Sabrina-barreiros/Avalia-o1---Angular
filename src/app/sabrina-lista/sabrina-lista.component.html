@@ -1,6 +1,36 @@
+<h3>Código</h3>
+<input type="text" [(ngModel)]="codigo"/>
+
+<h3>Disciplina</h3>
+<input type="text" [(ngModel)]="nome"/>
+
+<h3>Dia da semana</h3>
+<input type="text" [(ngModel)]="semana"/>
+
+<h3>Horário</h3>
+<input type="number" [(ngModel)]="horario"/>
+<br><br>
+<button>Adicionar</button>
+<button>Remover</button>
+
+
+
+
 <h2>Lista de Disciplinas</h2>
 <hr>
-<table border="">
+<table border="1">
+  <tr>
+    <th>Código</th>
+    <th>Disciplina</th>
+    <th>Dia da Semana</th>
+    <th>Horário</th>
+  
+  <tr *ngFor="let item of list, index as i">
+    <td><a [routerLink]="['/list', i]">{{item.id}}</a></td>
+    <td>{{item.text}}</td>
+    <td>{{item.text}}</td>
+    <td>{{item.data}}</td>
+  </tr>
 </table>
 
-código, nome, dia da semana e horário
+

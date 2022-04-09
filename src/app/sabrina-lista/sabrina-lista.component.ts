@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListData } from '../list';
 
 @Component({
   selector: 'app-sabrina-lista',
@@ -6,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sabrina-lista.component.css']
 })
 export class SabrinaListaComponent implements OnInit {
+list = ListData;
 
+codigo:number;
+nome:string;
+horario:number;
+semana:string;
   constructor() { }
 
   ngOnInit() {
